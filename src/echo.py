@@ -1,9 +1,8 @@
 import requests
-from pprint import pprint
 
-url = "https://postman-echo.com/get"
 
-response = requests.get(url)
-data = response.json()
+def get_echo_data():
+    url = "https://postman-echo.com/get"
 
-pprint(data)
+    response = requests.get(url, timeout=10)
+    return response.json()
