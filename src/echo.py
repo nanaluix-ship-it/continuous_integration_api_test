@@ -13,3 +13,9 @@ def get_echo_with_params(params):
     response = requests.get(url, params=params, timeout=10)
     response.raise_for_status()
     return response.json()
+
+def post_simple(payload):
+    url = "https://postman-echo.com/post"
+    response = requests.post(url, json=payload, timeout=10)
+    response.raise_for_status()
+    return response.json()
