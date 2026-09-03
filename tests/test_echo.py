@@ -5,11 +5,13 @@ from src.echo import get_echo_data, get_echo_with_params, post_simple, post_form
 
 @pytest.mark.get
 def test_get_none_param():
+    """Тестирование GET запроса без параметров"""
     data = get_echo_data()
     assert "headers" in data
 
 @pytest.mark.get_list
 def test_get_with_list():
+    """Тестирование GET запроса списком параметров"""
     query_data = {
         "page": 2,
         "tags": ["admin", "vip", "editor"]
@@ -22,6 +24,7 @@ def test_get_with_list():
 
 @pytest.mark.get_params
 def test_parameters_are_sent():
+    """Тестирование отправки с параметрами"""
     sent_data = {
         "name": "Alice",
         "age": 30,
@@ -35,6 +38,7 @@ def test_parameters_are_sent():
 
 @pytest.mark.post
 def test_post_simple():
+    """Тестирование POST запроса"""
     my_data = {
         "id": 777,
         "is_new": True,
@@ -48,6 +52,7 @@ def test_post_simple():
 
 @pytest.mark.post_form
 def test_post_form():
+    """Тестирование POST запроса с формой"""
     form_data = {
         "username": "tester_999",
         "password": "secret123",
