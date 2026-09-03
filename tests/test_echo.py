@@ -48,5 +48,5 @@ def test_post_form(sample_form_payload):
     response = post_form_data(sample_form_payload)
     assert isinstance(response, dict)
     server_form = response["form"]
-    assert server_form["username"] == "tester"
+    assert server_form["username"] == "tester_999"
     assert server_form["password"] == "secret123"
