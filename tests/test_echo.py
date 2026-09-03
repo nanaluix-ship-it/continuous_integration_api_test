@@ -34,7 +34,7 @@ def test_post_simple(sample_json_payload):
     response = post_simple(sample_json_payload)
     assert response["json"]["id"] == 777
     assert response["json"]["is_new"] is True
-    assert response["json"]["message"] == "Hello, is POST"
+    assert response["json"]["message"] == "Hello from POST"
 
 
 @pytest.mark.post_form
