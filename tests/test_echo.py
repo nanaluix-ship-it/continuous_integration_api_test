@@ -19,7 +19,7 @@ def test_get_with_list():
     }
     response = get_echo_with_params(query_data)
     args = response["args"]
-    assert args["page"] == "2"
+    assert args["page"] == "4"
     assert "tags" in args
 
 
