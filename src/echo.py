@@ -19,3 +19,9 @@ def post_simple(payload):
     response = requests.post(url, json=payload, timeout=10)
     response.raise_for_status()
     return response.json()
+
+def post_form_data(form_payload):
+    url = "https://postman-echo.com/post"
+    response = requests.post(url, data=form_payload, timeout=10)
+    response.raise_for_status()
+    return response.json()
