@@ -1,3 +1,4 @@
+"""Набор тестов для проверки HTTP-запросов к postman-echo."""
 import pytest
 
 from src.echo import get_echo_data, get_echo_with_params, post_simple, post_form_data
